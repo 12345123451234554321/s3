@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="int" style="font-size: 20vw;"></span>
+    <script src="https://cdn.jsdelivr.net/gh/Patashu/break_eternity.js@master/break_eternity.js"></script>
+    <script>
+        const e = new Decimal("2.718281828459045235360");
+        let time = new Decimal((Date.now() - new Date(2026, 0, 1))/1000/60/60/24);
+        setInterval(function loop() {
+            time = new Decimal((Date.now() - new Date(2026, 0, 1))/1000/60/60/24);
+            document.getElementById('int').innerHTML = new Decimal("200").mul(e.pow(new Decimal("0.01").mul(time))).toStringWithDecimalPlaces(4);
+        }, 20);
+    </script>
+</body>
+</html>
